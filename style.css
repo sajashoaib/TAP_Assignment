@@ -1,83 +1,162 @@
 :root {
-    --color-orange: #D1884F;
-    --color-steel-blue: #008AAA;
-    --color-sky-blue: #3BBADB;
+  --color-orange: #d1884f;
+  --color-steel-blue: #008aaa;
+  --color-sky-blue: #3bbadb;
+  --color-white: #fff;
 }
 
-body{
-margin: 0;
-padding: 0;
-font-family:'Poppins'sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
+
 .main__container {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main__container--padding {
+  padding: 1rem 0;
+}
+
+@media (max-width: 575px) {
+  .main__container {
+    width: 98%;
+  }
+}
+
+@media (min-width: 576px) {
+  .main__container {
+    width: 95%;
+  }
+}
+
+@media (min-width: 768px) {
+  .main__container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 992px) {
+  .main__container {
+    width: 85%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main__container {
     width: 80%;
-    margin: 0 auto;
-    position: relative;
   }
-  
-  .main__container--padding {
-    padding: 1rem 0;
-  }
-  
-  @media (max-width: 575px) {
-    .main__container {
-      width: 98%;
-    }
-  }
-  
-  @media (min-width: 576px) {
-    .main__container {
-      width: 95%;
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .main__container {
-      width: 90%;
-    }
-  }
-  
-  @media (min-width: 992px) {
-    .main__container {
-      width: 85%;
-    }
-  }
-  
-  @media (min-width: 1400px) {
-    .main__container {
-      width: 80%;
-    }
-  }
-  
-nav{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    /* background-color: aquamarine; */
-
-}
- nav ul{
-    list-style: none;
-     display: flex; 
-    justify-content:space-around; 
-}
-ul li:first-child i{
-    color:var(--color-orange);
-}
-ul i{
-    color: rgb(0, 0, 0);
-    padding:0 20px;
-}
-ul li:first-child a{
-    color: var(--color-orange);
-
-}
-ul li a{
-    color: black;
-    text-decoration: none;
-    padding:0 20px;
-    font-size: 18px;
-
 }
 
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 40px 0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+ul li:first-child i,
+ul li:first-child a {
+  color: var(--color-orange);
+}
+ul i {
+  color: rgb(0, 0, 0);
+  padding: 0 20px;
+}
+ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 0 20px;
+  font-size: 16px;
+}
 
+nav ul li:nth-child(2) a:hover,
+nav ul li:nth-child(3) a:hover,
+nav ul li:nth-child(2):hover i,
+nav ul li:nth-child(3):hover i {
+  color: var(--color-orange);
+  transition: all 0.3s ease-in-out;
+}
+.img-saja {
+  width: 35%;
+  height: 35%;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.img-saja:hover {
+  box-shadow: 0 0 20px var(--color-steel-blue);
+  transform: scale(1.05);
+}
+.main-descriptionDiv {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-descriptionDiv .content-desc {
+  max-width: 400px;
+  width: 40%;
+}
+.main-descriptionDiv h1 {
+  color: var(--color-steel-blue);
+  font-size: 28px;
+  padding: 20px 0;
+}
+.main-descriptionDiv .p1 {
+  color: var(--color-sky-blue);
+  font-size: 20px;
+}
+.span1 {
+  color: var(--color-orange);
+}
+.span2 {
+  color: var(--color-sky-blue);
+}
+.span2:hover {
+  cursor: pointer;
+}
+
+.content-desc .p2 {
+  font-weight: bold;
+  padding: 10px 0 20px 0;
+  font-size: 14px;
+}
+button {
+  font-size: 18px;
+  border-radius: 10px;
+  margin: 20px 20px 0 0;
+  cursor: pointer;
+}
+.btn1 {
+  color: var(--color-white);
+  background-color: var(--color-steel-blue);
+  padding: 5px 30px;
+  border: none;
+  box-shadow: 0 4px 8px var(--color-sky-blue);
+}
+.btn1:hover {
+  background-color: transparent;
+  border-color: var(--color-steel-blue);
+  color: var(--color-steel-blue);
+  transition: all 0.3s ease-in-out;
+}
+.btn2 {
+  padding: 5px 20px;
+  background-color: transparent;
+  border: 1px solid var(--color-steel-blue);
+  color: var(--color-steel-blue);
+  box-shadow: 0 4px 8px var(--color-sky-blue);
+}
+.btn2:hover {
+  color: var(--color-white);
+  background-color: var(--color-steel-blue);
+  transition: all 0.3s ease-in-out;
+}
