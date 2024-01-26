@@ -18,10 +18,6 @@
   position: relative;
 }
 
-.main__container--padding {
-  padding: 1rem 0;
-}
-
 @media (max-width: 575px) {
   .main__container {
     width: 98%;
